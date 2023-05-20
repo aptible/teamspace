@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  teamspace:
+    build:
+      context: .
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    ports:
+      - "8000:8000"
+    environment:
+      # Base settings
+      DATABASE_URL: postgres://aptible:password@pg:5432/db
+      DEBUG: True
+      DEFAULT_FROM_EMAIL: ${DEFAULT_FROM_EMAIL:-test@example.com}
+      SECRET_KEY: SECRET_KEY
+
+      # Also be evil?
+      EVIL: True
+
+      # Email
+      POSTMARK_API_KEY: ${POSTMARK_API_KEY:-foo}
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: aptible
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+      PGDATA: /var/db
+    volumes:
+      - db-data:/var/db
+
+volumes:
+  db-data:

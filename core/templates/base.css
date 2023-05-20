@@ -1,0 +1,336 @@
+body {
+    line-height: 1.42857;
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #4B5563;
+}
+
+.btn-blue {
+    background: #0E2C52;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 48px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    border-color: #0E2C52;
+}
+
+.btn-blue-md {
+    background: #0E2C52;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: unset !important;
+    border-color: #0E2C52;
+    height: 36px;
+}
+
+
+.btn-blue-sm {
+    background: #0E2C52;
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: unset !important;
+    border-color: #0E2C52;
+    margin-left: 10px;
+}
+
+.btn-white {
+    background: white;
+    color: #0E2C52;
+    font-size: 16px;
+    height: 48px;
+    border-radius: 8px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    border-color: #0E2C52;
+}
+
+.comment {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.comment-container {
+    padding-top: 10px;
+}
+
+.edit-form {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.edit-form label {
+    width: 150px;
+}
+
+.edit-submit-container {
+    margin-top: 10px;
+}
+
+.error {
+    width: 100%;
+    background: #D67666;
+    border-radius: 4px;
+    color: white;
+}
+
+.error-container {
+    padding-left: 10px;
+}
+
+.haha {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.homepage-container {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.homepage-content-container {
+    border: #D1D5DB;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.homepage-content-container .post {
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 40px;
+}
+
+.homepage-content-container .reply {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 30px;
+    border-left: solid;
+    border-color: #D1D5DB;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.homepage-content-container .time {
+    font-weight: bold;
+    color: #0E2C52;
+}
+
+.homepage-content-container .user-link {
+    padding-top: 10px;
+}
+
+.homepage-content-container .user-link a {
+    color: #0E2C52;
+    text-decoration: None;
+    padding: unset;
+    width: auto;
+}
+
+.homepage-content-container .user-link img {
+    box-sizing: content-box;
+}
+
+.homepage-content-container .username {
+    font-weight: bold;
+    color: #0E2C52;
+}
+
+.homepage-content-container .username img {
+    height: 32px;
+    width: 32px;
+    margin: 2px;
+}
+
+.homepage-header {
+    color: #0E2C52;
+}
+
+.login-container {
+    width: 480px
+}
+
+.login-form {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+}
+
+.login-page {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+}
+
+.login-row {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid #F3F4F6;
+    transition: background .5s;
+}
+
+.login-row input {
+    width: 100%;
+    height: 80%;
+    font-size: 16px;
+}
+
+.logo {
+    font-weight: bold;
+    color: #0E2C52;
+    font-size: 20px;
+    letter-spacing: 3px;
+    justify-content: center;
+}
+
+.main-user-header {
+    color: #0E2C52;
+    font-size: 24px;
+    font-weight: bold;
+    width: auto !important;
+    padding-left: unset !important;
+}
+
+.main-user img {
+    height: 32px;
+    width: 32px;
+    margin: 2px;
+    box-sizing: content-box;
+}
+
+.new-post {
+    padding-top: 10px;
+}
+
+.profile-pic-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search label {
+    width: 100px;
+}
+
+.search div {
+    margin: 10px;
+}
+
+.submit {
+    background-color: #0E2C52;
+    color: white;
+    height: 48px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.topbar {
+    background: #0E2C52;
+    width: 100%;
+    height: 48px;
+}
+
+.topbar .logo {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 10px 0 0 10px;
+}
+
+.topbar .logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-link img {
+    height: 32px;
+    width: 32px;
+    margin: 2px;
+}
+
+.user-page-container {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-page-content-container {
+    border: #D1D5DB;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.user-page-content-container .post {
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 40px;
+}
+
+.user-page-content-container .reply {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 30px;
+    border-left: solid;
+    border-color: #D1D5DB;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.user-page-content-container .time {
+    font-weight: bold;
+    color: #0E2C52;
+}
+
+.user-page-content-container .user-link {
+    padding-top: 5px;
+}
+
+.user-page-content-container .user-link a {
+    color: #0E2C52;
+    text-decoration: None;
+}
+
+.user-page-content-container .user-link img {
+    box-sizing: content-box;
+}
+
+.user-page-content-container .username {
+    font-weight: bold;
+    color: #0E2C52;
+}
+
+.user-page-content-container .username img {
+    height: 32px;
+    width: 32px;
+    margin: 2px;
+}
+
+.user-page-header {
+    font-weight: bold;
+    color: #0E2C52;
+    font-size: 24px;
+}
+
+.username a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.welcome {
+    font-size: 20px;
+    padding: 10px 10px 0 10px;
+    color: #0E2C52;
+}

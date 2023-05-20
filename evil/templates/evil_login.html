@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link href="{% url 'base_css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="login-form">
+            <div class="login-container">
+            <form action="{% url 'evil_login' %}" method="post">
+                {% csrf_token %}
+
+                <div class="login-row logo">TEAMSPACE</div>
+
+                {% if error %}<div class="login-row error"><div class="error-container">{{ error }}</div></div>{% endif %}
+
+                <div class="login-row"><input type="text" name="username" placeholder="username" id="username" value=""></div>
+                <div class="login-row"><input type="password" name="password" placeholder="password" id="password" value=""></div>
+
+                <div class="login-row"><input class="submit" type="submit" value="Log in"></div>
+                <a href="{% url 'password_reset_request' %}">Forgot your password?</a>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

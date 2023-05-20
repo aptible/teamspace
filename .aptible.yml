@@ -1,0 +1,2 @@
+before_release:
+  - set -a && . /app/.aptible.env && python manage.py migrate
