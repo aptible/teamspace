@@ -13,6 +13,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = 'DEBUG' in os.environ.keys()
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://*.on-aptible.com', 'http://localhost:8000']
 
 # Application definition
 
