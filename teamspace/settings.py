@@ -12,7 +12,7 @@ SECRET_KEY = 'SECRET_KEY'
 # Don't enable this in production!
 DEBUG = 'DEBUG' in os.environ.keys()
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.environ['HOST']]
 CSRF_TRUSTED_ORIGINS = ['https://*.on-aptible.com', 'http://localhost:8000']
 
 # Application definition
