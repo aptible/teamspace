@@ -126,30 +126,22 @@ def search(request):
     username = request.POST.get('username')
     user = User.objects.filter(username=username).first()
 
-    query = 'select * from pages_post'
+    posts = models.Post.objects.all()
 
-    date_query = None
     if date:
-        date_query = " (created_at >= '{} 00:00' and created_at <= '{} 23:59')".format(date, date)
+        start = '{} 00:00'.format(date)
+        stop = '{} 23:59'.format(date)
+        posts = posts.filter(created_at__range=[start, stop])
 
-    term_query = None
     if term:
-        term_query = " content LIKE '%%{}%%'".format(term)
+        posts = posts.filter(content__contains=term)
 
-    username_query = None
     if user and username:
-        username_query = " user_id = '{}'".format(user.id)
-    if username and not user:
-        username_query = " user_id = '0'"
-
-    where = ' and '.join(filter(None, [date_query, term_query, username_query]))
-
-    if date_query or term_query or username_query:
-        query += ' where'
-        query += where
-    query += ';'
-
-    posts = models.Post.objects.raw(query)
+        posts = posts.filter(user=user)
+    elif username:
+        # This ensures we return no results when
+        # searching for a bad user.
+        posts = posts.filter(user_id=0)
 
     context = {
         'date': date,
