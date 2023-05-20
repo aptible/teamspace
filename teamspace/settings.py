@@ -118,3 +118,5 @@ POSTMARK = {
     'TEST_MODE': os.environ.get('TEST_MODE', False),
     'VERBOSITY': 1,
 }
+
+ALLOWED_TAGS = {'a', 'img'}
