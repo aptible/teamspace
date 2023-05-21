@@ -5,7 +5,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'SECRET_KEY'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Enables debug if the environment variable `DEBUG`
 # is set to **any** value (just needs to be present).
