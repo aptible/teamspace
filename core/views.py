@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import auth
 from django.shortcuts import redirect, render
+from django.utils.http import url_has_allowed_host_and_scheme
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -13,6 +14,8 @@ def base_css(request):
 @csrf_exempt
 def login(request):
     next = request.GET.get('next') or request.POST.get('next') or '/'
+    if not url_has_allowed_host_and_scheme(next, settings.ALLOWED_HOSTS):
+        next = '/'
 
     if request.user.is_authenticated:
         return redirect(next)
