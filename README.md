@@ -5,10 +5,9 @@ security vulnerabilities in Django.
 
 ## Documented Vulnerabilities
 
-* SQL Injection
-* HTML Santization
-* Overly permissive `ALLOWED_HOSTS`
-* Open redirect
+* SQL Injection: https://github.com/aptible/teamspace/pull/1
+* HTML Sanitization: https://github.com/aptible/teamspace/pull/2
+* Overly permissive `ALLOWED_HOSTS` and an open redirect on login: https://github.com/aptible/teamspace/pull/3
 * Static, public `SECRET_KEY`
 
 ## Environment Variables
