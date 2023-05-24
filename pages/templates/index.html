@@ -1,4 +1,5 @@
 {% load static %}
+{% load cleaner %}
 
 <html>
 
@@ -35,7 +36,7 @@
                                         <img src="{% url 'pic' post.user.username %}" alt="Profile Picture for {{ post.user.username }}">
                                         By <a href="{% url 'view' post.user.username %}">{{ post.user.username }}</a> at {{ post.created_at }}
                                     </div>
-                                    <div class="content">{{ post.content|safe }}</div>
+                                    <div class="content">{{ post.content|clean|safe }}</div>
 
                                     {% for reply in post.post_set.all %}
                                         <div class="reply">
@@ -43,7 +44,7 @@
                                                 <img src="{% url 'pic' reply.user.username %}" alt="Profile Picture for {{ reply.user.username }}">
                                                 By <a href="{% url 'view' reply.user.username %}">{{ reply.user.username }}</a> at {{ reply.created_at }}
                                             </div>
-                                            <div class="content">{{ reply.content|safe }}</div>
+                                            <div class="content">{{ reply.content|clean|safe }}</div>
                                         </div>
                                     {% endfor %}
                                     <button class="btn-blue-sm" onclick="window.location.href='{% url 'reply' post.id %}'">Reply</button>

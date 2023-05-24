@@ -1,11 +1,11 @@
 {% load static %}
+{% load cleaner %}
 
 <html>
 <head>
     <link href="{% url 'base_css' %}" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="{% url 'css' user.username %}" rel="stylesheet">
-    <script src="{% url 'js' user.username %}"></script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                                 <img src="{% url 'pic' post.user.username %}" alt="Profile Picture for {{ post.user.username }}">
                                 By <a href="{% url 'view' post.user.username %}">{{ post.user.username }}</a> at {{ post.created_at }}
                             </div>
-                            <div class="content">{{ post.content|safe }}</div>
+                            <div class="content">{{ post.content|clean|safe }}</div>
 
 
                             {% for reply in post.post_set.all %}
@@ -41,7 +41,7 @@
                                         <img src="{% url 'pic' reply.user.username %}" alt="Profile Picture for {{ reply.user.username }}">
                                         By <a href="{% url 'view' reply.user.username %}">{{ reply.user.username }}</a> at {{ reply.created_at }}
                                     </div>
-                                    <div class="content">{{ reply.content|safe }}</div>
+                                    <div class="content">{{ reply.content|clean|safe }}</div>
                                 </div>
                             {% endfor %}
                             <button class="btn-blue-sm" onclick="window.location.href='{% url 'reply' post.id %}'">Reply</button>
@@ -54,7 +54,7 @@
                     <img src="{% url 'pic' user.username %}" alt="Profile Picture for {{ user.username }}">
                     <div class="main-user-header">{{ user.username.upper }}</div>
                 </div>
-                <div class="row">{{ page.about|safe }}</div>
+                <div class="row">{{ page.about|clean|safe }}</div>
             </div>
         </div>
         </div>
