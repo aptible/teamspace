@@ -2,4 +2,4 @@ dj-database-url==2.0.0
 django==4.1.9
 postmarker==1.0
 psycopg2==2.9.6
-uwsgi==2.0.21
+uwsgi==2.0.22
